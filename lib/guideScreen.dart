@@ -45,9 +45,9 @@ class _guideScreen extends State<guideScreen>{
                 children: [
                   Image.asset(
                       cryptocurrency.imagePath,
-                      height: 170,
-                      width: 170,),
-                  SizedBox(width: 20),
+                      height: 150,
+                      width: 150,),
+                  SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -57,8 +57,8 @@ class _guideScreen extends State<guideScreen>{
                         fontSize: 30,
                         fontFamily: "Kilometer"
                       )),
-                      Text(("\$" + cryptocurrency.price.toString())),
-                      Text("\$" + (cryptocurrency.marketCap/1000000).toString() + "million"),
+                      Text(("Price: \$" + cryptocurrency.price.toString() + " " + cryptocurrency.pricePlaceValue)),
+                      Text("Market cap: \$" + (cryptocurrency.marketCap).toString() + " " + cryptocurrency.marketCapPlaceValue),
                       RaisedButton.icon(onPressed: (){
                         setState(() {
                           cryptocurrency.updateInfo();
