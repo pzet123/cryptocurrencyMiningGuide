@@ -1,16 +1,16 @@
-import 'package:cryptocurrency_mining_guides/guideScreen.dart';
-import 'package:cryptocurrency_mining_guides/loadingScreen.dart';
+import 'package:cryptocurrency_mining_guides/CryptocurrencyScreen.dart';
+import 'package:cryptocurrency_mining_guides/StepScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocurrency_mining_guides/Cryptocurrency.dart';
-import 'stepScreen.dart';
+import 'InstructionScreen.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: "/",
   routes: {
     "/" : (context) => homeScreen(),
-    "/guideScreen" : (context) => guideScreen(),
-    "/stepsScreen": (context) => stepScreen(),
-    "/loadingScreen" : (context) => loadingScreen(),
+    "/CryptocurrencyScreen" : (context) => CryptocurrencyScreen(),
+    "/StepScreen": (context) => StepScreen(),
+    "/InstructionScreen" : (context) => InstructionScreen(),
   }
 ));
 
@@ -22,13 +22,18 @@ class homeScreen extends StatefulWidget {
 class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Crypto mining guides"),
+        title: Text("Mining guides"),
+        backgroundColor: Colors.blueGrey[300],
       ),
-      body: ListView(
-        children: getCryptocurrencyCards(context),
-        padding: EdgeInsets.symmetric(horizontal: 10),
+      body: Container(
+        color: Colors.blueGrey[600],
+        child: ListView(
+          children: getCryptocurrencyCards(context),
+          padding: EdgeInsets.symmetric(horizontal: 10),
+        ),
       )
     );
   }
@@ -36,94 +41,14 @@ class _homeScreenState extends State<homeScreen> {
 
 List<Cryptocurrency> getCryptocurrencies(){
   List<Cryptocurrency> cryptocurrencies = [
-    Cryptocurrency("Bitcoin", "assets/bitcoinLogo.png", [["1. First step"
-      ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],
-      ["1. Second step"
-        ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],["1. Third step"
-        ,"get this,get that,get that,get that,"
-            "get that,get that,get that,get that,"
-            "get that,get that"]]),
-    Cryptocurrency("Ethereum", "assets/ethereumLogo.png", [["1. First step"
-    ,"get this,get that,get that,get that,"
-    "get that,get that,get that,get that,"
-    "get that,get that"],
-    ["1. Second step"
-    ,"get this,get that,get that,get that,"
-    "get that,get that,get that,get that,"
-    "get that,get that"],["1. Third step"
-    ,"get this,get that,get that,get that,"
-        "get that,get that,get that,get that,"
-        "get that,get that"]]),
-    Cryptocurrency("Monero", "assets/moneroLogo.png", [["1. First step"
-    ,"get this,get that,get that,get that,"
-    "get that,get that,get that,get that,"
-    "get that,get that"],
-    ["1. Second step"
-    ,"get this,get that,get that,get that,"
-    "get that,get that,get that,get that,"
-    "get that,get that"],["1. Third step"
-    ,"get this,get that,get that,get that,"
-        "get that,get that,get that,get that,"
-        "get that,get that"]]),
-    Cryptocurrency("DogeCoin", "assets/dogecoinLogo.png", [["1. First step"
-      ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],
-      ["1. Second step"
-        ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],["1. Third step"
-        ,"get this,get that,get that,get that,"
-            "get that,get that,get that,get that,"
-            "get that,get that"]]),
-    Cryptocurrency("Chainlink", "assets/chainlinkLogo.png", [["1. First step"
-      ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],
-      ["1. Second step"
-        ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],["1. Third step"
-        ,"get this,get that,get that,get that,"
-            "get that,get that,get that,get that,"
-            "get that,get that"]]),
-    Cryptocurrency("Cardano", "assets/cardanoLogo.png", [["1. First step"
-      ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],
-      ["1. Second step"
-        ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],["1. Third step"
-        ,"get this,get that,get that,get that,"
-            "get that,get that,get that,get that,"
-            "get that,get that"]]),
-    Cryptocurrency("Litecoin", "assets/litecoinLogo.png", [["1. First step"
-      ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],
-      ["1. Second step"
-        ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],["1. Third step"
-        ,"get this,get that,get that,get that,"
-            "get that,get that,get that,get that,"
-            "get that,get that"]]),
-    Cryptocurrency("Uniswap", "assets/uniswapLogo.png", [["1. First step"
-      ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],
-      ["1. Second step"
-        ,"get this,get that,get that,get that,"
-          "get that,get that,get that,get that,"
-          "get that,get that"],["1. Third step"
-        ,"get this,get that,get that,get that,"
-            "get that,get that,get that,get that,"
-            "get that,get that"]])
+    Cryptocurrency("Bitcoin", "assets/bitcoinLogo.png", "assets/jsonGuides/bitcoinGuide.json"),
+    Cryptocurrency("Ethereum", "assets/ethereumLogo.png","assets/jsonGuides/ethereumGuide.json"),
+    Cryptocurrency("Monero", "assets/moneroLogo.png", "assets/jsonGuides/moneroGuide.json"),
+    Cryptocurrency("DogeCoin", "assets/dogecoinLogo.png", "assets/jsonGuides/dogecoinGuide.json"),
+    Cryptocurrency("Chainlink", "assets/chainlinkLogo.png", "assets/jsonGuides/chainlinkGuide.json"),
+    Cryptocurrency("Cardano", "assets/cardanoLogo.png", "assets/jsonGuides/cardanoGuide.json"),
+    Cryptocurrency("Litecoin", "assets/litecoinLogo.png", "assets/jsonGuides/litecoinGuide.json"),
+    Cryptocurrency("Uniswap", "assets/uniswapLogo.png", "assets/jsonGuides/uniswapGuide.json")
   ];
   return cryptocurrencies;
 }
@@ -135,7 +60,7 @@ List<Widget> getCryptocurrencyCards(BuildContext context){
   for(Cryptocurrency cryptocurrency in cryptocurrencies){
     cryptocurrencyCards.add(
       Card(
-
+        color: Colors.blueGrey[100],
         child: Column(
           children: [
             Image.asset(
@@ -145,10 +70,15 @@ List<Widget> getCryptocurrencyCards(BuildContext context){
             ),
             Text(cryptocurrency.name),
             RaisedButton.icon(onPressed: () {
-              Navigator.pushNamed(context, "/guideScreen", arguments: cryptocurrency,);
+              Navigator.pushNamed(context, "/CryptocurrencyScreen", arguments: cryptocurrency,);
             },
-                icon: Icon(Icons.book_rounded),
-                label: Text("Mining guide"))
+                color: Colors.blueGrey[400],
+                icon: Icon(Icons.book_rounded,
+                  color: Colors.blueGrey[100],),
+                label: Text("Mining guide",
+                style: TextStyle(
+                  color: Colors.blueGrey[100],
+                )))
 
           ],
         )

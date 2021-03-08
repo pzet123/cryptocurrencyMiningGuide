@@ -1,0 +1,11 @@
+{
+  "windows": ["Step one,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven",
+    "Step two,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,",
+    "Step Three,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,"],
+  "macos": ["Step one,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven",
+    "Step two,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,",
+    "Step Three,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,"],
+  "ubuntu": ["Step one,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven",
+    "Step two,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,",
+    "Step Three,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,"]
+}

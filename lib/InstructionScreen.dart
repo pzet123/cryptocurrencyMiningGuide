@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 
-class stepScreen extends StatelessWidget {
+class InstructionScreen extends StatelessWidget {
 
 
 
   @override
   Widget build(BuildContext context) {
-    String stepsString = ModalRoute.of(context).settings.arguments;
-    List<String> steps = stepsString.split(",");
+    List<String> steps =  ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
-      appBar: AppBar(),
-      body: ListView(
-        children: createStepsWidgets(steps),
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[300],
+      ),
+      body: Container(
+        color: Colors.blueGrey[600],
+        child: ListView(
+          children: createStepsWidgets(steps),
+        ),
       )
     );
   }
@@ -37,6 +41,7 @@ class stepScreen extends StatelessWidget {
               flex: 9,
                 child: Text(step,
                   style: TextStyle(
+                    color: Colors.blueGrey[100],
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   )),

@@ -1,5 +1,6 @@
 import 'dart:convert';
-
+import "dart:async" show Future;
+import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 
 class Cryptocurrency{
@@ -7,19 +8,22 @@ class Cryptocurrency{
   String imagePath;
   String pricePlaceValue;
   String marketCapPlaceValue;
-  List<List<String>> steps;
+  String guidePath;
+  //TODO: Convert this into a map which contains different guides depending on the OS with the OS being the key
+  Map steps;
   double marketCap;
   double price;
 
-  Cryptocurrency(String name, String imagePath, List<List<String>> steps){
+  Cryptocurrency(String name, String imagePath, String guidePath){
     this.name = name;
     this.imagePath = imagePath;
-    this.steps = steps;
     this.price = -1;
     this.marketCap = -1;
     this.pricePlaceValue = "";
     this.marketCapPlaceValue = "";
+    this.guidePath = guidePath;
     updateInfo();
+    loadSteps();
   }
 
 
@@ -29,6 +33,13 @@ class Cryptocurrency{
     marketCap = data[name.toLowerCase()]["usd_market_cap"].toDouble();
     price = data[name.toLowerCase()]["usd"].toDouble();
     adjustPlaceValues();
+  }
+
+  void loadSteps() async{
+     String guideString = await rootBundle.loadString(guidePath);
+     Map guideMap = jsonDecode(guideString);
+     steps = guideMap;
+
   }
 
   void adjustPlaceValues(){

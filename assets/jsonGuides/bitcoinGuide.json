@@ -1,0 +1,10 @@
+{
+  "windows": ["Setting up a wallet,,Wallets are used to receive transactions, you'll need a wallet to receive the rewards gained from mining bitcoin,,Popular wallets include electrum and Exodus, you can download these from their websites,,When creating a wallet, make sure that you note down your private key, without this you cannot access your funds and they may be lost forever,,You will also need your public key, this will be used to receive rewards gained from mining.",
+    "Selecting a mining pool,,There are several mining pools that you can join, each will offer a different reward,,It's good practice to join mining pools that are less popular to keep the network decentralised,,Once you've selected a pool, copy it's address."],
+  "macos": ["Step one,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven",
+    "Step two,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,",
+    "Step Three,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,"],
+  "ubuntu": ["Step one,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven",
+    "Step two,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,",
+    "Step Three,,instruction one,,instruction two,,instruction three,,instruction four,,instruction five,,instruction six,,instruction seven,,instruction eight,,instruction nine,,instruction ten,,instruction eleven,"]
+}
