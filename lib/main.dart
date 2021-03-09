@@ -48,7 +48,9 @@ List<Cryptocurrency> getCryptocurrencies(){
     Cryptocurrency("Chainlink", "assets/chainlinkLogo.png", "assets/jsonGuides/chainlinkGuide.json"),
     Cryptocurrency("Cardano", "assets/cardanoLogo.png", "assets/jsonGuides/cardanoGuide.json"),
     Cryptocurrency("Litecoin", "assets/litecoinLogo.png", "assets/jsonGuides/litecoinGuide.json"),
-    Cryptocurrency("Uniswap", "assets/uniswapLogo.png", "assets/jsonGuides/uniswapGuide.json")
+    Cryptocurrency("Uniswap", "assets/uniswapLogo.png", "assets/jsonGuides/uniswapGuide.json"),
+    Cryptocurrency("Dash", "assets/dashLogo.png", "assets/jsonGuides/dashGuide.json"),
+    Cryptocurrency("Zcash", "assets/zcashLogo.png", "assets/jsonGuides/zcashGuide.json")
   ];
   return cryptocurrencies;
 }
